@@ -1,0 +1,38 @@
+The App function is a react component, and a react component have two jobs:
+1. Returns a JSX
+2. Handle user events
+
+
+JSX is a set of instructions that tells react what type of content should be displayed.
+1. HTML element
+2. User element
+
+  When it is not a DOM element, like in the second case above, the app calls the function definition
+  somewhere inside the project structure.
+
+
+Request flow for react:
+
+  request --->
+          <--- response index.html 
+
+  request ---> 
+          <--- response bundle.js 
+
+
+Libraries:
+
+React:
+  - knows how to work with components
+  - called a 'reconciler'
+
+ReactDOM: 
+  - knows how to take instruction in what we want to show and turn into HTML
+  - called a 'renderer'
+
+Function:
+
+useState:
+  - use the react 'state; system
+  - keeps track of dynamic changes
+  - make react update the HTML on the screen
