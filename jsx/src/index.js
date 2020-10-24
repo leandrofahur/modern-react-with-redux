@@ -8,7 +8,7 @@ const App = function () {
   const labelText = "Enter name:";
   return (
     <div>
-      <label className="label" htmlFor="name">
+      <label className="label" for="name">
         {labelText}
       </label>
       <input id="name" type="text"></input>
