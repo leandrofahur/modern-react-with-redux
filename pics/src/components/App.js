@@ -1,8 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import SearchBar from "./SearchBox";
 
 const App = () => {
-  return <div>Hi there!</div>;
+  return (
+    <div className="ui container" style={{ marginTop: "10px" }}>
+      <SearchBar />
+    </div>
+  );
 };
 
 export default App;
