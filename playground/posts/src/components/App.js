@@ -1,7 +1,12 @@
 import React from "react";
+import Post from "./Post";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <Post />
+    </div>
+  );
 };
 
 export default App;
