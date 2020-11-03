@@ -2,15 +2,16 @@
   margin: auto;
 }
 
-.buttons {
+.ui.card .buttons {
+  margin: auto;
   padding: 10px;
 }
 
-input {
+.ui.card input {
   width: 100%;
 }
 
-textarea {
+.ui.card textarea {
   width: 100%;
   height: 100px;
 }
