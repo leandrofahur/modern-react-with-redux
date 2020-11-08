@@ -4,18 +4,21 @@ import axios from "axios";
 class App extends React.Component {
   state = { res: [] };
 
-  componentDidMount() {
-    axios
-      .get("https://randomuser.me/api/")
-      // .then((response) => console.log(response.data.results[0].gender));
-
-      .then((response) => {
-        this.setState({ res: response.data.results[0].gender });
-      });
-  }
+  onButtonClick = async () => {
+    const response = await axios.get("https://randomuser.me/api/");
+    this.setState({ res: response.data.results[0].gender });
+  };
 
   render() {
-    return <div>Gender: {this.state.res}</div>;
+    return (
+      <div on>
+        Gender: {this.state.res}
+        <br />
+        <button onClick={this.onButtonClick} type="submit">
+          Submit
+        </button>
+      </div>
+    );
   }
 }
 
