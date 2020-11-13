@@ -8,9 +8,11 @@ class Profile extends React.Component {
           <img src={this.props.avatar} alt="user avatar" />
         </div>
         <div className="content">
-          <a className="header">{this.props.user}</a>
+          <a href="http://www.facebook.com" target="_blank" className="header">
+            {this.props.user}
+          </a>
           <div className="meta">
-            <span className="date">Age: {this.props.age}</span>
+            <span>{this.props.country}</span>
           </div>
           <br />
           <p className="description">{this.props.message}</p>

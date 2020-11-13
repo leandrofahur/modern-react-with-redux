@@ -2,14 +2,28 @@ import React from "react";
 import "./ApprovalCard.css";
 
 class ApprovalCard extends React.Component {
+  matches = 0;
+  rejections = 0;
+
+  state = {
+    numOfMatches: null,
+    numOfRejections: null,
+  };
+
   onMatchClick = () => {
     console.log("Match button clicked!");
-    window.location.reload(false);
+    this.matches++;
+    this.setState({ numOfMatches: this.matches });
+    this.props.onClick();
+    this.props.onChange({ matches: this.matches, rejections: this.rejections });
   };
 
   onRejectClick = () => {
     console.log("Reject button clicked!");
-    window.location.reload(false);
+    this.rejections++;
+    this.setState({ numOfRejections: this.rejections });
+    this.props.onClick();
+    this.props.onChange({ matches: this.matches, rejections: this.rejections });
   };
 
   render() {
