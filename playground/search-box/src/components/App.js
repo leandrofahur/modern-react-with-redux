@@ -7,13 +7,13 @@ import faker from "faker";
 class App extends React.Component {
   render() {
     return (
-      <div className="ui card">
+      <div className="ui card" style={{ marginTop: "50px" }}>
         <ApprovalCard>
           <Profile
             avatar={faker.image.avatar()}
             user={`${faker.name.firstName()} ${faker.name.lastName()}`}
             age={Math.floor(Math.random() * 50) + 18}
-            message="Some dummy text..."
+            message={faker.lorem.sentence()}
           />
         </ApprovalCard>
       </div>

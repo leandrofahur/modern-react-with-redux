@@ -1,5 +1,20 @@
+.ui.card {
+  margin: auto;
+}
+
 .ui.card .image {
+  text-align: center;
+}
+
+.ui.card .image img {
   width: 100%;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.ui.card .description {
+  border: 1px solid #333;
+  padding: 5px;
 }
 
 .ui.card .header {

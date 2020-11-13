@@ -5,19 +5,20 @@ class Profile extends React.Component {
     return (
       <div>
         <div className="image">
-          <img src={this.props.avatar} />
+          <img src={this.props.avatar} alt="user avatar" />
         </div>
         <div className="content">
           <a className="header">{this.props.user}</a>
           <div className="meta">
             <span className="date">Age: {this.props.age}</span>
           </div>
-          Description:
+          <br />
           <p className="description">{this.props.message}</p>
         </div>
+        <br />
         <div className="extra content">
           <a>
-            <i class="user icon"></i>
+            <i className="user icon"></i>
             {Math.floor(Math.random() * 50)} Matches
           </a>
         </div>
