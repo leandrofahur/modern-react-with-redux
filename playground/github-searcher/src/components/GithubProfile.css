@@ -3,10 +3,16 @@
   grid-template-columns: repeat(2, 1fr);
   background-color: #faf0e6;
   border: 2px solid #8b4411;
+  border-radius: 5px;
+}
+
+.grid-container > *:first-child {
+  background-color: #8b4411;
 }
 
 img {
   width: 100%;
+  padding: 10px;
 }
 
 .profile-content {
