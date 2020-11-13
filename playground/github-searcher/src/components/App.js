@@ -31,6 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
+        <h1>Github Profile Searcher</h1>
         <SearchBar onSubmit={this.onSubmitGithubSearch} />
         <br />
         <GithubProfile

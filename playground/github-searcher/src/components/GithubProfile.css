@@ -4,15 +4,20 @@
   background-color: #faf0e6;
   border: 2px solid #8b4411;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .grid-container > *:first-child {
   background-color: #8b4411;
 }
 
+.grid-container > *:last-child {
+  margin: 10px;
+}
+
 img {
   width: 100%;
-  padding: 10px;
+  /* padding: 5px; */
 }
 
 .profile-content {
