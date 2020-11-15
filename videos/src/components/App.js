@@ -9,7 +9,7 @@ class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
   componentDidMount() {
-    // this.onTermSubmit("/");
+    this.onTermSubmit("/");
   }
 
   onTermSubmit = async (term) => {
@@ -19,10 +19,10 @@ class App extends React.Component {
       },
     });
 
-    // this.setState({
-    //   videos: response.data.items,
-    //   selectedVideo: response.data.items[0],
-    // });
+    this.setState({
+      videos: response.data.items,
+      selectedVideo: response.data.items[0],
+    });
   };
 
   onVideoSelect = (video) => {
