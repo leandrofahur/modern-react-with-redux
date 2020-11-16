@@ -23,7 +23,14 @@ class GithubProfile extends React.Component {
           </div>
           <br />
           <div className="group">
-            <i class="location arrow icon"></i>Location: {this.props.location}
+            <i className="location arrow icon"></i>Location:{" "}
+            {this.props.location}
+          </div>
+          <div className="group">
+            <i class="large github icon"></i>{" "}
+            <a href={this.props.url} target="__blank">
+              Link
+            </a>
           </div>
         </div>
       </div>

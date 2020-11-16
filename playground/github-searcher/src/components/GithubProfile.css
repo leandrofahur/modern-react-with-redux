@@ -16,7 +16,8 @@
 }
 
 img {
-  width: 100%;
+  width: 328px;
+  height: 310.85px;
   /* padding: 5px; */
 }
 
@@ -29,4 +30,10 @@ img {
   font-size: 1.2rem;
   border-bottom: 1px dashed #333;
   padding-bottom: 10px;
+}
+
+.group:last-child {
+  border-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 0px;
 }

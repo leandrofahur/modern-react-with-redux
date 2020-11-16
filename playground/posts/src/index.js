@@ -1,8 +1,6 @@
 import React from "react";
-import ReactDom from "react-dom";
+import ReactDOM from "react-dom";
 
-const App = () => {
-  return <div>Hello World!</div>;
-};
+import App from "./components/App";
 
-ReactDom.render(<App />, document.querySelector("#root"));
+ReactDOM.render(<App />, document.querySelector("#root"));

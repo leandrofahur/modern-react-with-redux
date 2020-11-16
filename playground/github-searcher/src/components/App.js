@@ -14,6 +14,7 @@ class App extends React.Component {
     email: "",
     publicRepos: null,
     location: "",
+    url: "",
   };
 
   onSubmitGithubSearch = async (username) => {
@@ -25,6 +26,7 @@ class App extends React.Component {
       email: response.data.email,
       publicRepos: response.data.public_repos,
       location: response.data.location,
+      url: response.data.html_url,
     });
   };
 
@@ -40,6 +42,7 @@ class App extends React.Component {
           email={this.state.email}
           publicRepos={this.state.publicRepos}
           location={this.state.location}
+          url={this.state.url}
         />
       </div>
     );
