@@ -18,7 +18,7 @@ const Accordion = ({ items }) => {
             onTitleClicked(index);
           }}
         >
-          <i className="dropdown icon"></i>
+          <i className='dropdown icon'></i>
           {item.title}
         </div>
         <div className={`content ${active}`}>
@@ -27,7 +27,7 @@ const Accordion = ({ items }) => {
       </React.Fragment>
     );
   });
-  return <div className="ui styled accordion">{renderedItems}</div>;
+  return <div className='ui styled accordion'>{renderedItems}</div>;
 };
 
 export default Accordion;

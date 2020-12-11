@@ -32,22 +32,22 @@ const Search = () => {
         clearTimeout(timeoutId);
       };
     }
-  }, [term]);
+  }, [term, results.length]);
 
   const renderedResults = results.map((result) => {
     return (
-      <div key={result.pageid} className="item">
-        <div className="right floated content">
+      <div key={result.pageid} className='item'>
+        <div className='right floated content'>
           <a
             href={`https://en.wikipedia.org?curid=${result.pageid}`}
-            target="_blank"
-            className="ui button"
+            target='_blank'
+            className='ui button'
           >
             Go
           </a>
         </div>
-        <div className="content">
-          <div className="header">{result.title}</div>
+        <div className='content'>
+          <div className='header'>{result.title}</div>
           {/* {result.snippet} */}
           <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>
         </div>
@@ -57,17 +57,17 @@ const Search = () => {
 
   return (
     <div>
-      <div className="ui form">
-        <div className="field">
+      <div className='ui form'>
+        <div className='field'>
           <label>Enter Search Term</label>
           <input
-            className="input"
+            className='input'
             onChange={(e) => setTerm(e.target.value)}
             value={term}
           />
         </div>
       </div>
-      <div className="ui celled list">{renderedResults}</div>
+      <div className='ui celled list'>{renderedResults}</div>
     </div>
   );
 };
