@@ -1,32 +1,21 @@
 import React, { useState, useEffect } from "react";
-import youtube from "../apis/youtube";
 import SearchBar from "./SearchBar";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
+import useVideos from "../hooks/useVideos";
 // import Spinner from "./Spinner";
 
 const App = () => {
-  const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [videos, search] = useVideos("line follower robots");
 
   useEffect(() => {
-    onTermSubmit("line follower robots");
-  }, []);
-
-  const onTermSubmit = async (term) => {
-    const response = await youtube.get("/search", {
-      params: {
-        q: term,
-      },
-    });
-
-    setVideos(response.data.items);
-    setSelectedVideo(response.data.items[0]);
-  };
+    setSelectedVideo(videos[0]);
+  }, [videos]);
 
   return (
     <div className="ui container">
-      <SearchBar onTermSubmit={onTermSubmit} />
+      <SearchBar onTermSubmit={search} />
       <div className="ui grid">
         <div className="ui row">
           <div className="eleven wide column">
