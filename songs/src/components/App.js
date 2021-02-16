@@ -1,6 +1,5 @@
 import React from "react";
-import { selectSong } from "../actions";
-import SongList from "../components/SongList";
+import SongList from "./songList";
 
 const App = () => {
   return (

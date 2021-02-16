@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 
-class SongList extends Component {
+class SongList extends React.Component {
   render() {
     console.log(this.props);
-    return <div>Song List</div>;
+    return <div>SongList Component</div>;
   }
 }
 
